@@ -29,83 +29,94 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Center(
-        child: Column(children: [
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            margin: const EdgeInsets.fromLTRB(10, 20, 10, 20),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                'To see my channels, please click logos',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 20,
-                    fontFamily: 'Varela',
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.red[700]),
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                'images/bakcground.jpg',
               ),
+              fit: BoxFit.cover,
             ),
           ),
-          Row(children: [
-            Expanded(
-              child: Card(
-                margin: EdgeInsets.fromLTRB(10, 5, 0, 5),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(250),
-                ),
-                child: InkWell(
-                  onTap: () => launch(
-                      'https://www.youtube.com/channel/UCn7rIX4UXChWNBVp2wwKV_Q'),
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Image.asset(
-                      'images/youtube.png',
+          child: Column(children: [
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(150),
+              ),
+              margin: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+              child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Image.asset(
+                    'images/avatar.png',
+                    scale: 3,
+                  )),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+              child: Text(
+                'Here is my channels',
+                style: TextStyle(
+                    fontFamily: 'Pacifico', fontSize: 20, color: Colors.white),
+              ),
+            ),
+            Row(children: [
+              Expanded(
+                child: Card(
+                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(250),
+                  ),
+                  child: InkWell(
+                    onTap: () => launch(
+                        'https://www.youtube.com/channel/UCn7rIX4UXChWNBVp2wwKV_Q'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Image.asset(
+                        'images/youtube.png',
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Expanded(
-              child: Card(
-                margin: EdgeInsets.fromLTRB(10, 5, 0, 5),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(250),
-                ),
-                child: InkWell(
-                  onTap: () =>
-                      launch('https://www.instagram.com/safamuhammedkaraca/'),
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Image.asset(
-                      'images/Instagram.png',
+              Expanded(
+                child: Card(
+                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(250),
+                  ),
+                  child: InkWell(
+                    onTap: () =>
+                        launch('https://www.instagram.com/safamuhammedkaraca/'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Image.asset(
+                        'images/Instagram.png',
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Expanded(
-              child: Card(
-                margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(250),
-                ),
-                child: InkWell(
-                  onTap: () =>
-                      launch('https://www.instagram.com/safamuhammedkaraca/'),
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Image.asset(
-                      'images/twitter.png',
+              Expanded(
+                child: Card(
+                  margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(250),
+                  ),
+                  child: InkWell(
+                    onTap: () =>
+                        launch('https://www.instagram.com/safamuhammedkaraca/'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Image.asset(
+                        'images/twitter.png',
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
+            ]),
           ]),
-        ]),
+        ),
       ),
     );
   }
