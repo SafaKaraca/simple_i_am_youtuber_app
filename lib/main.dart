@@ -4,10 +4,11 @@ import 'package:url_launcher/url_launcher.dart';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
+      //Appbar styling
       appBar: AppBar(
         backgroundColor: Colors.red[900],
         title: const Text(
-          'I am a Youtuber',
+          'I am a Content Creator',
           style: TextStyle(fontFamily: 'Pacifico'),
         ),
         centerTitle: true,
@@ -30,15 +31,19 @@ class _MainPageState extends State<MainPage> {
     return SafeArea(
       child: Center(
         child: Container(
+          //Background image
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                'images/bakcground.jpg',
+                'images/background.jpg',
               ),
               fit: BoxFit.cover,
             ),
           ),
+
+          //Starting Column
           child: Column(children: [
+            //Avatar Card
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(150),
@@ -51,15 +56,20 @@ class _MainPageState extends State<MainPage> {
                     scale: 3,
                   )),
             ),
+            //Padding for the text of channels
             Padding(
               padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
               child: Text(
                 'Here is my channels',
                 style: TextStyle(
-                    fontFamily: 'Pacifico', fontSize: 20, color: Colors.white),
+                    fontFamily: 'Pacifico', fontSize: 30, color: Colors.white),
               ),
             ),
+
+            //First Row (Youtube,Instagram,Twitter)
+
             Row(children: [
+              //First cards Expanded
               Expanded(
                 child: Card(
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
@@ -78,6 +88,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
+              //Second cards Expanded
               Expanded(
                 child: Card(
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
@@ -96,6 +107,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
+              //Third cards Expanded
               Expanded(
                 child: Card(
                   margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
@@ -115,7 +127,10 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ]),
+
+            //Second Row (Linkedin, Github, Stackoverflow
             Row(children: [
+              //Fourth cards Expanded
               Expanded(
                 child: Card(
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
@@ -134,6 +149,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
+              //Fifth cards Expanded
               Expanded(
                 child: Card(
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
@@ -151,6 +167,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
+              //Sixth cards Expanded
               Expanded(
                 child: Card(
                   margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
@@ -162,7 +179,7 @@ class _MainPageState extends State<MainPage> {
                     child: Padding(
                       padding: const EdgeInsets.all(20),
                       child: Image.asset(
-                        'images/stacoverflow.png',
+                        'images/stackoverflow.png',
                       ),
                     ),
                   ),
