@@ -30,7 +30,7 @@ class _MainPageState extends State<MainPage> {
     return SafeArea(
       child: Center(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
                 'images/bakcground.jpg',
@@ -109,6 +109,60 @@ class _MainPageState extends State<MainPage> {
                       padding: const EdgeInsets.all(20),
                       child: Image.asset(
                         'images/twitter.png',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: [
+              Expanded(
+                child: Card(
+                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(250),
+                  ),
+                  child: InkWell(
+                    onTap: () => launch(
+                        'https://www.linkedin.com/in/safamuhammedkaraca/'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Image.asset(
+                        'images/linkedin.png',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Card(
+                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(250),
+                  ),
+                  child: InkWell(
+                    onTap: () => launch('https://github.com/SafaKaraca'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Image.asset(
+                        'images/github.png',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Card(
+                  margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(250),
+                  ),
+                  child: InkWell(
+                    onTap: () => launch('https://stackoverflow.com/'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Image.asset(
+                        'images/stacoverflow.png',
                       ),
                     ),
                   ),
