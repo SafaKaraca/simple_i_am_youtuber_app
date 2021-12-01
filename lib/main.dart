@@ -14,7 +14,6 @@ void main() {
         centerTitle: true,
       ),
       body: const MainPage(),
-      backgroundColor: Colors.grey[200],
     ),
   ));
 }
@@ -45,6 +44,7 @@ class _MainPageState extends State<MainPage> {
           child: Column(children: [
             //Avatar Card
             Card(
+              color: Color(0xFF1D1E33),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(150),
               ),
@@ -72,6 +72,7 @@ class _MainPageState extends State<MainPage> {
               //First cards Expanded
               Expanded(
                 child: Card(
+                  color: Color(0xFF1D1E33),
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(250),
@@ -91,6 +92,7 @@ class _MainPageState extends State<MainPage> {
               //Second cards Expanded
               Expanded(
                 child: Card(
+                  color: Color(0xFF1D1E33),
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(250),
@@ -110,6 +112,7 @@ class _MainPageState extends State<MainPage> {
               //Third cards Expanded
               Expanded(
                 child: Card(
+                  color: Color(0xFF1D1E33),
                   margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(250),
@@ -133,6 +136,7 @@ class _MainPageState extends State<MainPage> {
               //Fourth cards Expanded
               Expanded(
                 child: Card(
+                  color: Color(0xFF1D1E33),
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(250),
@@ -152,6 +156,7 @@ class _MainPageState extends State<MainPage> {
               //Fifth cards Expanded
               Expanded(
                 child: Card(
+                  color: Color(0xFF1D1E33),
                   margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(250),
@@ -170,6 +175,7 @@ class _MainPageState extends State<MainPage> {
               //Sixth cards Expanded
               Expanded(
                 child: Card(
+                  color: Color(0xFF1D1E33),
                   margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(250),
@@ -192,3 +198,5 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
+//TODO: Linkedin and github logos will be fixed. Code repetitives will be fixed. Colors might be checked.
