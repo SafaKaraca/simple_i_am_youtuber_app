@@ -71,62 +71,27 @@ class _MainPageState extends State<MainPage> {
             Row(children: [
               //First cards Expanded
               Expanded(
-                child: Card(
-                  color: Color(0xFF1D1E33),
-                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(250),
-                  ),
-                  child: InkWell(
-                    onTap: () => launch(
-                        'https://www.youtube.com/channel/UCn7rIX4UXChWNBVp2wwKV_Q'),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.asset(
-                        'images/youtube.png',
-                      ),
-                    ),
-                  ),
+                child: ReusableCard(
+                  launchLink:
+                      'https://www.youtube.com/channel/UCn7rIX4UXChWNBVp2wwKV_Q',
+                  imageLink: 'images/youtube.png',
+                  colour: Colors.white,
                 ),
               ),
               //Second cards Expanded
               Expanded(
-                child: Card(
-                  color: Color(0xFF1D1E33),
-                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(250),
-                  ),
-                  child: InkWell(
-                    onTap: () =>
-                        launch('https://www.instagram.com/safamuhammedkaraca/'),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.asset(
-                        'images/Instagram.png',
-                      ),
-                    ),
-                  ),
+                child: ReusableCard(
+                  launchLink: 'https://www.instagram.com/safamuhammedkaraca/',
+                  imageLink: 'images/Instagram.png',
+                  colour: Colors.white,
                 ),
               ),
               //Third cards Expanded
               Expanded(
-                child: Card(
-                  color: Color(0xFF1D1E33),
-                  margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(250),
-                  ),
-                  child: InkWell(
-                    onTap: () =>
-                        launch('https://www.instagram.com/safamuhammedkaraca/'),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.asset(
-                        'images/twitter.png',
-                      ),
-                    ),
-                  ),
+                child: ReusableCard(
+                  launchLink: 'https://www.twitter.com/',
+                  imageLink: 'images/twitter.png',
+                  colour: Colors.white,
                 ),
               ),
             ]),
@@ -135,64 +100,61 @@ class _MainPageState extends State<MainPage> {
             Row(children: [
               //Fourth cards Expanded
               Expanded(
-                child: Card(
-                  color: Color(0xFF1D1E33),
-                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(250),
-                  ),
-                  child: InkWell(
-                    onTap: () => launch(
-                        'https://www.linkedin.com/in/safamuhammedkaraca/'),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.asset(
-                        'images/linkedin.png',
-                      ),
-                    ),
-                  ),
+                child: ReusableCard(
+                  launchLink: 'https://www.linkedin.com/in/safamuhammedkaraca/',
+                  imageLink: 'images/linkedin.png',
+                  colour: Color(0xFF1D1E33),
                 ),
               ),
               //Fifth cards Expanded
               Expanded(
-                child: Card(
-                  color: Color(0xFF1D1E33),
-                  margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(250),
-                  ),
-                  child: InkWell(
-                    onTap: () => launch('https://github.com/SafaKaraca'),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.asset(
-                        'images/github.png',
-                      ),
-                    ),
-                  ),
+                child: ReusableCard(
+                  launchLink: 'https://github.com/SafaKaraca',
+                  imageLink: 'images/github.png',
+                  colour: Color(0xFF1D1E33),
                 ),
               ),
               //Sixth cards Expanded
               Expanded(
-                child: Card(
-                  color: Color(0xFF1D1E33),
-                  margin: const EdgeInsets.fromLTRB(10, 5, 10, 5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(250),
-                  ),
-                  child: InkWell(
-                    onTap: () => launch('https://stackoverflow.com/'),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.asset(
-                        'images/stackoverflow.png',
-                      ),
-                    ),
-                  ),
+                child: ReusableCard(
+                  launchLink: 'https://stackoverflow.com/',
+                  imageLink: 'images/stackoverflow.png',
+                  colour: Color(0xFF1D1E33),
                 ),
               ),
             ]),
           ]),
+        ),
+      ),
+    );
+  }
+}
+
+class ReusableCard extends StatelessWidget {
+  ReusableCard(
+      {required this.launchLink,
+      required this.imageLink,
+      required this.colour});
+
+  String launchLink;
+  String imageLink;
+  Color colour;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: colour,
+      margin: const EdgeInsets.fromLTRB(10, 5, 0, 5),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(250),
+      ),
+      child: InkWell(
+        onTap: () => launch(launchLink),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Image.asset(
+            imageLink,
+          ),
         ),
       ),
     );
