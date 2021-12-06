@@ -8,7 +8,7 @@ void main() {
       appBar: AppBar(
         backgroundColor: Colors.red[900],
         title: const Text(
-          'I am a Content Creator',
+          'I am a Creator',
           style: TextStyle(fontFamily: 'Pacifico'),
         ),
         centerTitle: true,
