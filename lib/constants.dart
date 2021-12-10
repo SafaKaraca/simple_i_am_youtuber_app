@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
 
-const kSecondCardBackground = Color(0xFF1D1E33);
-const kFirstCardBackground = Color(0xFFDADDFC);
+const kSecondSocialCardBackground = Color(0xFF1D1E33);
+const kFirstSocialCardBackground = Color(0xFFDADDFC);
+
+const kInputTextStyle = TextStyle(
+    fontWeight: FontWeight.w200,
+    fontFamily: 'Pacifico',
+    color: kFirstSocialCardBackground);
