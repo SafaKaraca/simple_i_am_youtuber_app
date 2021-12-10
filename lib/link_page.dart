@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'reusable_card.dart';
+import 'constants.dart';
 
 class LinkPage extends StatefulWidget {
   @override
@@ -36,11 +37,11 @@ class _LinkPageState extends State<LinkPage> {
             child: Column(children: [
               //Avatar Card
               Card(
-                color: Color(0xFF1D1E33),
+                color: kSecondCardBackground,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(150),
                 ),
-                margin: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+                margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
                 child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Image.asset(
@@ -69,7 +70,7 @@ class _LinkPageState extends State<LinkPage> {
                     launchLink:
                         'https://www.youtube.com/channel/UCn7rIX4UXChWNBVp2wwKV_Q',
                     imageLink: 'images/youtube.png',
-                    colour: Colors.white,
+                    colour: kFirstCardBackground,
                   ),
                 ),
                 //Second cards Expanded
@@ -77,7 +78,7 @@ class _LinkPageState extends State<LinkPage> {
                   child: ReusableCard(
                     launchLink: 'https://www.instagram.com/safamuhammedkaraca/',
                     imageLink: 'images/Instagram.png',
-                    colour: Colors.white,
+                    colour: kFirstCardBackground,
                   ),
                 ),
                 //Third cards Expanded
@@ -85,7 +86,7 @@ class _LinkPageState extends State<LinkPage> {
                   child: ReusableCard(
                     launchLink: 'https://www.twitter.com/',
                     imageLink: 'images/twitter.png',
-                    colour: Colors.white,
+                    colour: kFirstCardBackground,
                   ),
                 ),
               ]),
@@ -98,7 +99,7 @@ class _LinkPageState extends State<LinkPage> {
                     launchLink:
                         'https://www.linkedin.com/in/safamuhammedkaraca/',
                     imageLink: 'images/linkedin.png',
-                    colour: Color(0xFF1D1E33),
+                    colour: kSecondCardBackground,
                   ),
                 ),
                 //Fifth cards Expanded
@@ -106,7 +107,7 @@ class _LinkPageState extends State<LinkPage> {
                   child: ReusableCard(
                     launchLink: 'https://github.com/SafaKaraca',
                     imageLink: 'images/github.png',
-                    colour: Color(0xFF1D1E33),
+                    colour: kSecondCardBackground,
                   ),
                 ),
                 //Sixth cards Expanded
@@ -114,7 +115,7 @@ class _LinkPageState extends State<LinkPage> {
                   child: ReusableCard(
                     launchLink: 'https://stackoverflow.com/',
                     imageLink: 'images/stackoverflow.png',
-                    colour: Color(0xFF1D1E33),
+                    colour: kSecondCardBackground,
                   ),
                 ),
               ]),
