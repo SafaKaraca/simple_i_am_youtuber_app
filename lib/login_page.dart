@@ -19,12 +19,12 @@ class LoginPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 5.0),
-                child: Text(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
                   'Welcome to Login Page',
                   style: TextStyle(
                       fontSize: 30.0,
@@ -32,10 +32,8 @@ class LoginPage extends StatelessWidget {
                       fontFamily: 'Pacifico',
                       color: kFirstSocialCardBackground),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 5.0),
-                child: Container(
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   height: 60,
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -51,10 +49,8 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 5.0),
-                child: Container(
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   height: 60,
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -69,41 +65,41 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
-                  );
-                },
-                child: Container(
-                  margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
-                  height: 60.0,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30.0),
-                      color: kSecondSocialCardBackground),
-                  child: Center(
-                    child: Text(
-                      'LOG IN',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );
+                  },
+                  child: Container(
+                    margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                    height: 60.0,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30.0),
+                        color: kSecondSocialCardBackground),
+                    child: Center(
+                      child: Text(
+                        'LOG IN',
+                      ),
                     ),
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RegisterPage()),
-                  );
-                },
-                child: Text(
-                  'Click for Register',
-                  style: TextStyle(decoration: TextDecoration.underline),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RegisterPage()),
+                    );
+                  },
+                  child: Text(
+                    'Click for Register',
+                    style: TextStyle(decoration: TextDecoration.underline),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
