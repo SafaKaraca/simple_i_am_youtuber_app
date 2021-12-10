@@ -70,9 +70,15 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
                 child: Container(
+                  margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
                   height: 60.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -89,7 +95,7 @@ class LoginPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LinkPage()),
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
                   );
                 },
                 child: Text(
