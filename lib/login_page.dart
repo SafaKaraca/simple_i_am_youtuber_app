@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:i_am_youtuber/constants.dart';
 import 'package:i_am_youtuber/link_page.dart';
 import 'package:i_am_youtuber/register_page.dart';
+import 'form_input_decoration.dart';
+import 'form_button_decoration.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -11,14 +13,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                'images/background.jpg',
-              ),
-              fit: BoxFit.cover,
-            ),
-          ),
+          decoration: kBackgorundBoxDecoraiton,
           child: Padding(
             padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
             child: Column(
@@ -26,77 +21,25 @@ class LoginPage extends StatelessWidget {
               children: [
                 Text(
                   'Welcome to Login Page',
-                  style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.w200,
-                      fontFamily: 'Pacifico',
-                      color: kFirstSocialCardBackground),
+                  style: kHeaderTextStyle,
                 ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  height: 60,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: 'Email',
-                      hintStyle: kInputTextStyle,
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          style: BorderStyle.solid,
-                          color: Colors.white,
-                        ),
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  height: 60,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: 'Password',
-                      hintStyle: kInputTextStyle,
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                        ),
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                    ),
-                  ),
+                FormInputDecoration(hintText: 'Email'),
+                FormInputDecoration(hintText: 'Password'),
+                FormButtonDecoration(
+                  text: 'Log In',
+                  Page: LinkPage(),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
-                    );
-                  },
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
-                    height: 60.0,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30.0),
-                        color: kSecondSocialCardBackground),
-                    child: Center(
-                      child: Text(
-                        'LOG IN',
-                      ),
-                    ),
+                  child: Text(
+                    'Click for Register',
+                    style: kUnderlineTextStyle,
                   ),
-                ),
-                GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => RegisterPage()),
                     );
                   },
-                  child: Text(
-                    'Click for Register',
-                    style: TextStyle(decoration: TextDecoration.underline),
-                  ),
                 ),
               ],
             ),

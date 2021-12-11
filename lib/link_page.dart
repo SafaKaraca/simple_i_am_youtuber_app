@@ -24,14 +24,7 @@ class _LinkPageState extends State<LinkPage> {
         child: Center(
           child: Container(
             //Background image
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  'images/background.jpg',
-                ),
-                fit: BoxFit.cover,
-              ),
-            ),
+            decoration: kBackgorundBoxDecoraiton,
 
             //Starting Column
             child: Column(children: [
