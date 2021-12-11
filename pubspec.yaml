@@ -49,9 +49,9 @@ flutter:
   fonts:
   - family: Pacifico
     fonts:
-    - asset: lib/fonts/Pacifico-Regular.ttf
+    - asset: lib/Fonts/Pacifico-Regular.ttf
 
   - family: Varela
     fonts:
-    - asset: lib/fonts/VarelaRound-Regular.ttf
+    - asset: lib/Fonts/VarelaRound-Regular.ttf
 

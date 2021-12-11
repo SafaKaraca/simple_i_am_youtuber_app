@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'reusable_card.dart';
-import 'constants.dart';
+import '../reusable_card.dart';
+import '../Constants/constants.dart';
 
 class LinkPage extends StatefulWidget {
   @override

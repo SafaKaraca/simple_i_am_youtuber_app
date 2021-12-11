@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:i_am_youtuber/constants.dart';
-import 'package:i_am_youtuber/login_page.dart';
-import 'form_input_decoration.dart';
-import 'form_button_decoration.dart';
+import 'package:i_am_youtuber/Constants/constants.dart';
+import 'package:i_am_youtuber/Pages/link_page.dart';
+import 'package:i_am_youtuber/Pages/register_page.dart';
+import '../FormDecorations/form_input_decoration.dart';
+import '../FormDecorations/form_button_decoration.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,26 +20,24 @@ class RegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Welcome to Register Page',
+                  'Welcome to Login Page',
                   style: kHeaderTextStyle,
                 ),
-                FormInputDecoration(hintText: 'Name'),
-                FormInputDecoration(hintText: 'Surname'),
                 FormInputDecoration(hintText: 'Email'),
                 FormInputDecoration(hintText: 'Password'),
                 FormButtonDecoration(
-                  text: 'Register',
-                  Page: LoginPage(),
+                  text: 'Log In',
+                  Page: LinkPage(),
                 ),
                 GestureDetector(
                   child: Text(
-                    'Click for Log In',
+                    'Click for Register',
                     style: kUnderlineTextStyle,
                   ),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => RegisterPage()),
                     );
                   },
                 ),

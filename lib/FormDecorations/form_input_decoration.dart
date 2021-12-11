@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import '../Constants/constants.dart';
 
 class FormInputDecoration extends StatelessWidget {
   String hintText;

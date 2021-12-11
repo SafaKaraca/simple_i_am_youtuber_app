@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:i_am_youtuber/link_page.dart';
-import 'package:i_am_youtuber/login_page.dart';
-import 'package:i_am_youtuber/register_page.dart';
+import 'package:i_am_youtuber/Pages/link_page.dart';
+import 'package:i_am_youtuber/Pages/login_page.dart';
+import 'package:i_am_youtuber/Pages/register_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {

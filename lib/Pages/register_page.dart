@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:i_am_youtuber/constants.dart';
-import 'package:i_am_youtuber/link_page.dart';
-import 'package:i_am_youtuber/register_page.dart';
-import 'form_input_decoration.dart';
-import 'form_button_decoration.dart';
+import 'package:i_am_youtuber/Constants/constants.dart';
+import 'package:i_am_youtuber/Pages/login_page.dart';
+import '../FormDecorations/form_input_decoration.dart';
+import '../FormDecorations/form_button_decoration.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,24 +19,26 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Welcome to Login Page',
+                  'Welcome to Register Page',
                   style: kHeaderTextStyle,
                 ),
+                FormInputDecoration(hintText: 'Name'),
+                FormInputDecoration(hintText: 'Surname'),
                 FormInputDecoration(hintText: 'Email'),
                 FormInputDecoration(hintText: 'Password'),
                 FormButtonDecoration(
-                  text: 'Log In',
-                  Page: LinkPage(),
+                  text: 'Register',
+                  Page: LoginPage(),
                 ),
                 GestureDetector(
                   child: Text(
-                    'Click for Register',
+                    'Click for Log In',
                     style: kUnderlineTextStyle,
                   ),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => RegisterPage()),
+                      MaterialPageRoute(builder: (context) => LoginPage()),
                     );
                   },
                 ),
