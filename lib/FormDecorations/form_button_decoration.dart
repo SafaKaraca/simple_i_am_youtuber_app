@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Constants/constants.dart';
 
+//The button that is used in login and register
 class FormButtonDecoration extends StatelessWidget {
   String text;
   var Page;

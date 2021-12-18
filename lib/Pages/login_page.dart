@@ -5,6 +5,8 @@ import 'package:i_am_youtuber/Pages/register_page.dart';
 import '../FormDecorations/form_input_decoration.dart';
 import '../FormDecorations/form_button_decoration.dart';
 
+//Login page ui
+
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -19,12 +21,14 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                //Header text
                 Text(
                   'Welcome to Login Page',
                   style: kHeaderTextStyle,
                 ),
-                FormInputDecoration(hintText: 'Email'),
-                FormInputDecoration(hintText: 'Password'),
+                FormInputDecoration(hintText: 'Email'), //Email input form
+                FormInputDecoration(hintText: 'Password'), //Password input form
+                //Login button
                 FormButtonDecoration(
                   text: 'Log In',
                   Page: LinkPage(),

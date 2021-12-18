@@ -10,7 +10,7 @@ const kInputTextStyle = TextStyle(
 
 const kButtonTextStyle = TextStyle(
     fontWeight: FontWeight.w200,
-    fontFamily: 'Pacifico',
+    fontFamily: 'VarelaRound',
     fontSize: 20.0,
     color: kFirstSocialCardBackground);
 
